@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "^9.1.4",
+    "micro-dev": "^2.2.2",
+    "ramda": "^0.25.0",
+    "random-int": "^1.0.0"
+  },
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev -p 5000"
+  }
+}
