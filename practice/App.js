@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
   getQuote = () => {
     this.setState({ componentState: LOADING })
-    fetch('http://localhost:5000')
+    fetch('https://trhc-quotes-api.now.sh')
       .then(res => res.json())
       .then(quote => this.setState({ quote, componentState: READY }))
       .catch(err =>

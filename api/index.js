@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
   }
   //throw new Error('Quote not found')
   return await new Promise((resolve, reject) => {
-    return setTimeout(() => pickAQuote(quotes), 200)
+    return setTimeout(() => resolve(pickAQuote(quotes)), 200)
   })
 }
 
