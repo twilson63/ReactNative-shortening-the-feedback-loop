@@ -3,6 +3,7 @@
     "sdkVersion": "26.0.0",
     "ios": {
       "bundleIdentifier": "com.trhc.quotes"
-    }
+    },
+    "icon": "quotes.png"
   }
 }

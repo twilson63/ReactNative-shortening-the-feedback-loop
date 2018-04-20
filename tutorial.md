@@ -182,3 +182,5 @@ if (this.componentState === ERROR) {
 * Add a background Image
 * Using Getty Image API to change per quote
 * Add a tweet feature to post a quote on twitter
+* Setup application icon
+* Setup splash page
