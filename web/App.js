@@ -1,14 +1,13 @@
 import React from 'react'
-import { AppRegistry, StyleSheet, Text, View, Dimensions } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
-var { height, width } = Dimensions.get('window')
-
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Welcome to React Native Web</Text>
-        <Text>Awesome!</Text>
+        <Text>Open up App.js to start working on your app!</Text>
+        <Text>Changes you make will automatically reload.</Text>
+        <Text>Shake your phone to open the developer menu.</Text>
       </View>
     )
   }
@@ -16,14 +15,10 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: width,
-    height: height,
     flex: 1,
+    height: 650,
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
-  },
-  text: {}
+  }
 })
-
-AppRegistry.registerComponent('App', () => App)
-AppRegistry.runApplication('App', { rootTag: document.getElementById('app') })

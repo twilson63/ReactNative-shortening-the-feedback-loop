@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
   getQuote = () => {
     this.setState({ componentState: LOADING })
-    fetch('https://trhc-quotes-api.now.sh')
+    fetch('http://localhost:5000')
       .then(res => res.json())
       .then(quote => this.setState({ quote, componentState: READY }))
       .catch(err =>
@@ -66,7 +66,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: 'Avenir-Medium',
     fontSize: 22,
     color: 'green',
     marginBottom: 16
@@ -84,6 +83,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    height: 650
   }
 })

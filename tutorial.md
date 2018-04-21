@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   quote: {
-    fontFamily: 'avenir',
+    fontFamily: 'Avenir-Medium',
     fontSize: 24,
     marginHorizontal: 16
   },
@@ -95,7 +95,7 @@ componentDidMount() {
 
 ```js
 state = {
-  component: STATE,
+  componentState: STATE,
   error: '',
   quote: {
     quoteAuthor: '',

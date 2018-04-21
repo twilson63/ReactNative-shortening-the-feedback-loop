@@ -1,8 +1,9 @@
+const cors = require('micro-cors')()
 const quotes = require('./quotes.json')
 const randomInt = require('random-int')
 const { nth, length } = require('ramda')
 
-module.exports = async (req, res) => {
+const handler = async (req, res) => {
   if (req.url === '/favicon.ico') {
     return null
   }
@@ -15,3 +16,5 @@ module.exports = async (req, res) => {
 function pickAQuote(quotes) {
   return nth(randomInt(length(quotes)), quotes)
 }
+
+module.exports = cors(handler)
