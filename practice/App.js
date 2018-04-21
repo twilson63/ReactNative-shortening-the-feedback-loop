@@ -1,11 +1,14 @@
+// dependencies
 import React from 'react'
 import { StyleSheet, Text, View, Button, ActivityIndicator } from 'react-native'
 import { cond, equals } from 'ramda'
-// states
 
+// component states
 const [LOADING, READY, ERROR] = ['LOADING', 'READY', 'ERROR']
 
+// App Component
 export default class App extends React.Component {
+  // initial State
   state = {
     componentState: LOADING,
     error: '',
@@ -14,6 +17,7 @@ export default class App extends React.Component {
       quoteText: ''
     }
   }
+  // handler function
   getQuote = () => {
     this.setState({ componentState: LOADING })
     fetch('https://trhc-quotes-api.now.sh')
@@ -23,9 +27,12 @@ export default class App extends React.Component {
         this.setState({ error: err.message, componentState: ERROR })
       )
   }
+  // load function
   componentDidMount() {
     this.getQuote()
   }
+
+  // render component
   render() {
     return cond([
       [
@@ -64,6 +71,7 @@ export default class App extends React.Component {
   }
 }
 
+// styles
 const styles = StyleSheet.create({
   title: {
     fontFamily: 'Avenir-Medium',
@@ -79,7 +87,6 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginBottom: 32
   },
-
   container: {
     flex: 1,
     backgroundColor: '#fff',
